@@ -2,14 +2,14 @@
 # require 'pp'
 
 sum = 0
-pHash =  {}
+basket =  {}
 while (product = gets.chomp) != "стоп"
-    priceForOne = gets.chomp.to_f
+    price_for_one = gets.chomp.to_f
     count = gets.chomp.to_f
-    dSum = priceForOne * count
-    sum += dSum
-    puts "сумма за #{product}: #{dSum}"
-    pHash[product.to_sym] = {priceForOne => count}
+    delta_sum = price_for_one * count
+    sum += delta_sum
+    puts "сумма за #{product}: #{delta_sum}"
+    basket[product.to_sym] = {price_for_one => count}
 end
 puts "сумма всех покупок: #{sum}"
-# pp pHash
+# pp basket
